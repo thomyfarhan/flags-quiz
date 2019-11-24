@@ -6,6 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import com.aesthomic.flagsquiz.databinding.FragmentTitleBinding
 
 class TitleFragment : Fragment() {
 
@@ -13,8 +15,9 @@ class TitleFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_title, container, false)
+        val binding = DataBindingUtil.inflate<FragmentTitleBinding>(inflater,
+            R.layout.fragment_title, container, false)
+        return binding.root
     }
-
-
+    
 }

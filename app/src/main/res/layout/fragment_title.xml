@@ -1,26 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
-    tools:context=".TitleFragment">
 
-    <ImageView
-        android:id="@+id/ivTitleImage"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/ic_flag_black_24dp"
-        tools:ignore="ContentDescription" />
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <Button
-        android:id="@+id/btnTitleStart"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ivTitleImage"
-        android:layout_marginTop="16dp"
-        android:background="@color/colorPrimaryLight"
-        android:text="@string/btn_title_start_text"
-        android:textColor="@color/colorTextPrimary"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        tools:context=".TitleFragment">
 
-</RelativeLayout>
+        <ImageView
+            android:id="@+id/ivTitleImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ic_flag_black_24dp"
+            tools:ignore="ContentDescription" />
+
+        <Button
+            android:id="@+id/btnTitleStart"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivTitleImage"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorPrimaryLight"
+            android:text="@string/btn_title_start_text"
+            android:textColor="@color/colorTextPrimary" />
+
+    </RelativeLayout>
+</layout>
