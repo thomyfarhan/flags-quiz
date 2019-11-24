@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Flags Quiz</string>
+    <string name="btn_title_start_text">Start !</string>
 </resources>
