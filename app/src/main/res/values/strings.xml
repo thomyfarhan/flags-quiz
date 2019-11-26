@@ -8,4 +8,6 @@
     <string name="btn_game_submit_text">Submit</string>
     <string name="btn_game_won_play_text">Play Again</string>
     <string name="tv_game_won_passed_text">You Passed The Quiz!</string>
+    <string name="tv_game_over_failed_text">You Failed!</string>
+    <string name="btn_game_over_restart_text">Try Again</string>
 </resources>
