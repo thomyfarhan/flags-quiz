@@ -6,4 +6,6 @@
     <string name="rb_game_second_answer_text">Nalipcamemalwal</string>
     <string name="rb_game_third_answer_text">Andna Andnewran</string>
     <string name="btn_game_submit_text">Submit</string>
+    <string name="btn_game_won_play_text">Play Again</string>
+    <string name="tv_game_won_passed_text">You Passed The Quiz!</string>
 </resources>

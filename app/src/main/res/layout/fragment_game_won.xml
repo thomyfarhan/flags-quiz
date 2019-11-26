@@ -5,7 +5,40 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="@android:color/holo_green_light"
         tools:context=".GameWonFragment">
+
+        <ImageView
+            android:id="@+id/ivGameWonImage"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_sentiment_very_satisfied_black_24dp"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tvGameWonPassed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivGameWonImage"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorTextSecondary"
+            android:text="@string/tv_game_won_passed_text"/>
+
+        <Button
+            android:id="@+id/btnGameWonPlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvGameWonPassed"
+            android:layout_marginStart="64dp"
+            android:layout_marginEnd="64dp"
+            android:layout_marginTop="32dp"
+            android:background="@color/colorPrimaryLight"
+            android:textColor="@color/colorTextPrimary"
+            android:text="@string/btn_game_won_play_text"/>
 
     </RelativeLayout>
 
