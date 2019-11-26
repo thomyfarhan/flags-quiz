@@ -5,8 +5,80 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center"
         tools:context=".GameFragment">
 
+        <ImageView
+            android:id="@+id/ivGameImage"
+            android:layout_width="220dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:src="@color/colorPrimaryDark"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tvGameQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivGameImage"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textColor="@color/colorTextPrimary"
+            android:text="@string/tv_game_question_text" />
+
+        <RadioGroup
+            android:id="@+id/rgGameAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvGameQuestion"
+            android:layout_marginStart="64dp"
+            android:layout_marginEnd="64dp"
+            android:layout_marginBottom="16dp"
+            android:animateLayoutChanges="true">
+
+            <RadioButton
+                android:id="@+id/rbGameFirstAnswer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="18sp"
+                android:text="@string/rb_game_first_answer_text"/>
+
+            <RadioButton
+                android:id="@+id/rbGameSecondAnswer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="18sp"
+                android:text="@string/rb_game_second_answer_text"/>
+
+            <RadioButton
+                android:id="@+id/rbGameThirdAnswer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="18sp"
+                android:text="@string/rb_game_third_answer_text"/>
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnGameSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rgGameAnswer"
+            android:layout_marginStart="64dp"
+            android:layout_marginEnd="64dp"
+            android:background="@color/colorPrimaryLight"
+            android:textColor="@color/colorTextPrimary"
+            android:text="@string/btn_game_submit_text"/>
+
     </RelativeLayout>
-    
+
 </layout>

@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Flags Quiz</string>
     <string name="btn_title_start_text">Start !</string>
+    <string name="tv_game_question_text">Which Country Has This Flag?</string>
+    <string name="rb_game_first_answer_text">Landsu Chadpu Republic</string>
+    <string name="rb_game_second_answer_text">Nalipcamemalwal</string>
+    <string name="rb_game_third_answer_text">Andna Andnewran</string>
+    <string name="btn_game_submit_text">Submit</string>
 </resources>
