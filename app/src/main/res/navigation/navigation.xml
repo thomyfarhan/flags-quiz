@@ -36,12 +36,22 @@
         android:id="@+id/gameWonFragment"
         android:name="com.aesthomic.flagsquiz.GameWonFragment"
         android:label="GameWonFragment"
-        tools:layout="@layout/fragment_game_won"/>
+        tools:layout="@layout/fragment_game_won">
+        <action
+            android:id="@+id/action_gameWonFragment_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:popUpTo="@+id/titleFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/gameOverFragment"
         android:name="com.aesthomic.flagsquiz.GameOverFragment"
         android:label="GameOverFragment"
-        tools:layout="@layout/fragment_game_over"/>
+        tools:layout="@layout/fragment_game_over">
+        <action
+            android:id="@+id/action_gameOverFragment_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:popUpTo="@+id/titleFragment" />
+    </fragment>
 
 </navigation>
