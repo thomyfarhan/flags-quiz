@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.aesthomic.flagsquiz.databinding.FragmentGameBinding
+import kotlin.math.min
 
 class GameFragment : Fragment() {
 
@@ -17,7 +18,7 @@ class GameFragment : Fragment() {
     private lateinit var currentQuestion: Question
     lateinit var answers: MutableList<String>
     private var questionIndex: Int = 0
-    private var numQuestions: Int = 3
+    private var numQuestions: Int = 0
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -60,6 +61,7 @@ class GameFragment : Fragment() {
     private fun shuffleQuestions() {
         questions = mutableListOf()
         questions.addAll(QuestionData.listQuestion)
+        numQuestions = min((questions.size+1)/2, 3)
 
         questions.shuffle()
         setQuestion()
