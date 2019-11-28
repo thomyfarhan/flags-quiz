@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.aesthomic.flagsquiz.databinding.FragmentGameOverBinding
 
 class GameOverFragment : Fragment() {
@@ -17,6 +18,11 @@ class GameOverFragment : Fragment() {
     ): View? {
         val binding = DataBindingUtil.inflate<FragmentGameOverBinding>(inflater,
             R.layout.fragment_game_over, container, false)
+
+        binding.btnGameOverRestart.setOnClickListener { view: View ->
+            view.findNavController().navigate(R.id.action_gameOverFragment_to_gameFragment)
+        }
+
         return binding.root
     }
     
