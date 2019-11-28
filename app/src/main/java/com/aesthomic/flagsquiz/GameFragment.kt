@@ -13,9 +13,10 @@ class GameFragment : Fragment() {
 
     private lateinit var binding: FragmentGameBinding
     private lateinit var questions: MutableList<Question>
-    lateinit var currentQuestion: Question
+    private lateinit var currentQuestion: Question
     lateinit var answers: MutableList<String>
     private var questionIndex: Int = 0
+    private var numQuestions: Int = 3
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,6 +28,30 @@ class GameFragment : Fragment() {
         binding.game = this
 
         shuffleQuestions()
+
+        binding.btnGameSubmit.setOnClickListener { view: View ->
+            val checkId = binding.rgGameAnswer.checkedRadioButtonId
+
+            if (checkId != 1) {
+                val answerIndex = when(checkId) {
+                    R.id.rbGameFirstAnswer -> 0
+                    R.id.rbGameSecondAnswer -> 1
+                    else -> 2
+                }
+
+                if (answers[answerIndex] == currentQuestion.answer[0]) {
+                    questionIndex++
+                    if (questionIndex < numQuestions) {
+                        setQuestion()
+                        binding.invalidateAll()
+                    } else {
+
+                    }
+                } else {
+
+                }
+            }
+        }
 
         return binding.root
     }
