@@ -20,7 +20,7 @@ class GameWonFragment : Fragment() {
             R.layout.fragment_game_won, container, false)
 
         binding.btnGameWonPlay.setOnClickListener { view:View ->
-            view.findNavController().navigate(R.id.action_gameWonFragment_to_gameFragment)
+            view.findNavController().navigate(GameWonFragmentDirections.actionGameWonFragmentToGameFragment())
         }
 
         return binding.root
