@@ -54,7 +54,7 @@
                 android:checked="true"
                 android:textColor="@color/colorTextPrimary"
                 android:textSize="18sp"
-                android:text="@string/rb_game_first_answer_text"/>
+                android:text="@{game.answers[0]}"/>
 
             <RadioButton
                 android:id="@+id/rbGameSecondAnswer"
@@ -62,7 +62,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorTextPrimary"
                 android:textSize="18sp"
-                android:text="@string/rb_game_second_answer_text"/>
+                android:text="@{game.answers[1]}"/>
 
             <RadioButton
                 android:id="@+id/rbGameThirdAnswer"
@@ -70,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorTextPrimary"
                 android:textSize="18sp"
-                android:text="@string/rb_game_third_answer_text"/>
+                android:text="@{game.answers[2]}"/>
 
         </RadioGroup>
 
