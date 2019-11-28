@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.aesthomic.flagsquiz.databinding.FragmentGameBinding
@@ -70,9 +71,11 @@ class GameFragment : Fragment() {
     private fun setQuestion() {
         currentQuestion = questions[questionIndex]
         binding.ivGameImage.setImageResource(resources.getIdentifier(currentQuestion.image,
-            "drawable",requireActivity().packageName))
+            "drawable", (activity as AppCompatActivity).packageName))
 
         answers = currentQuestion.answer.toMutableList()
         answers.shuffle()
+
+        (activity as AppCompatActivity).supportActionBar?.title = "Question ${questionIndex+1}/${numQuestions}"
     }
 }
