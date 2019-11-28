@@ -11,14 +11,17 @@ import com.aesthomic.flagsquiz.databinding.FragmentGameBinding
 
 class GameFragment : Fragment() {
 
+    private lateinit var binding: FragmentGameBinding
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = DataBindingUtil.inflate<FragmentGameBinding>(inflater,
+        binding = DataBindingUtil.inflate(inflater,
             R.layout.fragment_game, container, false)
+
+        binding.game = this
+
         return binding.root
     }
-
-
 }
