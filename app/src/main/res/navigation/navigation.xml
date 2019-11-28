@@ -54,4 +54,10 @@
             app:popUpTo="@+id/titleFragment" />
     </fragment>
 
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.aesthomic.flagsquiz.AboutFragment"
+        android:label="@string/about_flags_quiz_text"
+        tools:layout="@layout/fragment_about"/>
+
 </navigation>
