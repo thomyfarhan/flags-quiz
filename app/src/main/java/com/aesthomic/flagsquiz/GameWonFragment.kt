@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.aesthomic.flagsquiz.databinding.FragmentGameWonBinding
 
 class GameWonFragment : Fragment() {
@@ -17,6 +18,11 @@ class GameWonFragment : Fragment() {
     ): View? {
         val binding = DataBindingUtil.inflate<FragmentGameWonBinding>(inflater,
             R.layout.fragment_game_won, container, false)
+
+        binding.btnGameWonPlay.setOnClickListener { view:View ->
+            view.findNavController().navigate(R.id.action_gameWonFragment_to_gameFragment)
+        }
+
         return binding.root
     }
     
