@@ -76,6 +76,6 @@ class GameFragment : Fragment() {
         answers = currentQuestion.answer.toMutableList()
         answers.shuffle()
 
-        (activity as AppCompatActivity).supportActionBar?.title = "Question ${questionIndex+1}/${numQuestions}"
+        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.game_fragment_title_text, questionIndex+1, numQuestions)
     }
 }
