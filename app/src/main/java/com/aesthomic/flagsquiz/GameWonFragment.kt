@@ -1,6 +1,7 @@
 package com.aesthomic.flagsquiz
 
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
@@ -32,6 +33,20 @@ class GameWonFragment : Fragment() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId) {
+            R.id.share -> shareSuccess()
+        }
         return super.onOptionsItemSelected(item)
+    }
+
+    private fun shareSuccess() {
+        startActivity(getShareIntent())
+    }
+
+    private fun getShareIntent(): Intent {
+        val args = GameWonFragmentArgs.fromBundle(arguments!!)
+        return Intent(Intent.ACTION_SEND)
+            .setType("text/plain")
+            .putExtra(Intent.EXTRA_TEXT, getString(R.string.intent_share_message_text, args.numCorrect, args.numQuestions))
     }
 }
