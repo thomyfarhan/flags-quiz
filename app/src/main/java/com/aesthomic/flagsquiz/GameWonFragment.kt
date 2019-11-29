@@ -30,6 +30,11 @@ class GameWonFragment : Fragment() {
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
         inflater.inflate(R.menu.menu_winner, menu)
+
+        // Check if intent resolves to an Activity
+        if (getShareIntent().resolveActivity(requireActivity().packageManager) == null) {
+            menu.findItem(R.menu.menu_winner).isVisible = false
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
